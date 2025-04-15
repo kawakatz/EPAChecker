@@ -13,7 +13,7 @@
   <a href="#references">References</a>
 </p>
 
-EPAChecker can check if EPA is enabled.<br>
+EPAChecker can check if Extended Protection for Authentication (EPA) is enabled.<br>
 
 # Usage
 ```sh
