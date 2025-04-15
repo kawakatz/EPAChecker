@@ -37,6 +37,13 @@ options:
 $ python3 epachecker.py -u <URL> -d <domain> -U <username> -p <password>
 ```
 
+## Proxy Compatibility
+Due to EPA specifications, EPAChecker cannot be used in conjunction with proxies that decrypt HTTPS communication, such as Burp Suite. This is, in a sense, the intended behavior of EPA, as the certificate information used during authentication would become that of the proxy. However, EPAChecker can be used with SOCKS proxies, so I recommend using it as follows.
+```sh
+$ export https_proxy=socks5://<socks ip>:<socks port>
+$ python3 epachecker.py -u <URL> -d <domain> -U <username> -p <password>
+```
+
 # Logic
 The approach involves two NTLM authentication attempts and compares their outcomes to determine the status of EPA.
 
